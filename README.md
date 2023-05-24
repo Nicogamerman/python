@@ -1,1 +1,1 @@
-# python
+# Ejercicios Python curso de desarrollo Django

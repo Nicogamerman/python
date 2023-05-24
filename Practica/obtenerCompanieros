@@ -1,0 +1,23 @@
+#Falto el profesor y los alumnos van a armar la clase, el alumno de mayor edad dara la clase, y el de menor edad sera su asistente
+#Pedir el nombre y la edad de los companieros que vinieron a clase.
+
+def obtener_companieros(cantidadDeCompanieros):
+        companieros = []
+    # Solicitar información de nombre y edad para cada compañero
+        for i in range(cantidadDeCompanieros):
+            nombre= input("Ingrese el nombre del alumno: ")
+            edad= input("Ingrese la edad del alumno: ")
+    # Crear una tupla con el nombre y la edad del compañero
+            companiero=(nombre,edad)
+    # Agregar la tupla a la lista de compañeros
+            companieros.append(companiero)
+    # Ordenar la lista de compañeros por edad (según el segundo elemento de la tupla)
+        companieros.sort(key=lambda x:x [1])
+    # Obtener el nombre del compañero más joven (primer elemento de la primera tupla)
+        asistente= companieros[0][0]
+    # Obtener el nombre del compañero más mayor (primer elemento de la última tupla)
+        profesor= companieros[-1][0]
+        return asistente,profesor
+# Llamar a la función obtener_companieros con un valor de cantidadDeCompanieros igual a 5
+asistente,profesor = obtener_companieros(5)
+print(f"El profesor es: {profesor} y su asistente es {asistente}")
